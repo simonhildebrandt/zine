@@ -7,15 +7,18 @@
   "license": "MIT",
   "scripts": {
     "serve": "web-dev-server -p 9000 -r dev --app-index dev/index.html --open --watch",
-    "build": "yarn esbuild src/index.jsx --bundle --outfile=dev/index.js",
-    "watch": "yarn esbuild src/index.jsx --bundle --outfile=dev/index.js --watch",
+    "build": "yarn esbuild src/index.jsx --bundle --jsx=automatic --outfile=dev/index.js",
+    "watch": "yarn esbuild src/index.jsx --bundle --jsx=automatic --outfile=dev/index.js --watch",
     "build_prod": "yarn esbuild src/index.jsx --bundle --outfile=public/index.js"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "esbuild": "^0.14.18",
+    "@uidotdev/usehooks": "^2.4.1",
     "@web/dev-server": "^0.4.6",
-    "react": "^18",
-    "react-dom": "^18"
+    "esbuild": "^0.25.1",
+    "react": "^19",
+    "react-dom": "^19",
+    "snapsvg": "^0.5.1",
+    "svg-text": "^0.5.1"
   }
 }
